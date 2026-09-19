@@ -1,17 +1,42 @@
 aid: airnow
 name: Airnow
-description: 'Airnow is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Airnow is a London-headquartered group of specialist mobile-app technology companies operating as
+  one engine for app-first businesses: Lab Cave (Madrid, mobile game publishing and growth), AppMonsta
+  (UK, programmatic ad-tech and an app-store intelligence dataset), Mobstr (UK, AI-driven mobile-app
+  security scanning and GRC ratings) and Vambrace (UK, managed SOC and vCISO services). The group is
+  fusing these into Project Chimera, a unified SaaS platform announced for 2026 that layers AI
+  analytics, media buying and monetisation on a 24-million-app data lake. Airnow itself publishes no
+  developer program, API reference or machine-readable contract; the API surface in the group sits
+  with its subsidiary AppMonsta. Pre-IPO shares trade on EquityZen.
 url: https://raw.githubusercontent.com/api-evangelist/airnow/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
 x-tier: stub
 x-tier-reason: harvest
+x-hq: London, United Kingdom
+x-founded: '2013'
+x-subsidiaries:
+- name: Lab Cave Games
+  url: https://labcavegames.com/
+- name: AppMonsta
+  url: https://appmonsta.ai/
+  note: Publishes the group's only API surface (api.appmonsta.com; docs at beta.appmonsta.ai/api/appmonsta_docs) - profile separately.
+- name: Mobstr
+  url: https://mobstr.io/
+- name: Vambrace
+  url: https://www.vambrace.co.uk/
 specificationVersion: '0.20'
 created: '2026-09-19'
 modified: '2026-09-19'
 tags:
 - Company
+- Mobile Apps
+- App Intelligence
+- Ad Tech
+- Mobile Security
+- Holding Company
+- United Kingdom
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +44,37 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/airnow-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/airnow
+  url: https://airnow.com/
+- type: SecondaryMarket
+  url: https://equityzen.com/company/airnow/
+- type: LinkedIn
+  url: https://uk.linkedin.com/company/airnowdata
+x-enrichment:
+  date: '2026-09-19'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    airnow.com is a single-page Azure Static Web App brochure for the Airnow group (Lab Cave,
+    AppMonsta, Mobstr, Vambrace) that answers every path, including /developers, /api,
+    /openapi.json and every /.well-known/* document, with the same 63,778-byte HTML shell; the
+    group's only API surface belongs to its subsidiary AppMonsta (api.appmonsta.com), and the
+    former product domain airnowdata.com now 301s to an unrelated gambling site.
+  evidence:
+  - url: https://airnow.com/developers
+    status: 200
+  - url: https://airnow.com/openapi.json
+    status: 200
+  - url: https://airnow.com/.well-known/agent-card.json
+    status: 200
+  - url: https://airnowdata.com/
+    status: 301
+  - url: https://api.airnow.com/
+    status: 0
+  checked: '2026-09-19'

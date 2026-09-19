@@ -1,0 +1,77 @@
+generated: '2026-09-19'
+method: probed
+source: live GET of /.well-known/* on airnow.com and www.airnow.com (the only hosts the record knows; airnowdata.com, the former product domain, now 301s to an unrelated gambling site and was not probed as a company host)
+note: >-
+  No document served. airnow.com is an Azure Static Web App whose catch-all returns the same
+  63,778-byte HTML shell (etag "01337787") with a 200 for every path, including every
+  /.well-known/* path probed, so each 200 below is an SPA shell and is recorded as a miss. No
+  WellKnown or SecurityTxt pointer is emitted.
+hosts:
+- host: airnow.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    served: false
+    note: HTML SPA shell, not a document
+  - path: /.well-known/openid-configuration
+    status: 200
+    served: false
+    note: HTML SPA shell, not a document
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    served: false
+    note: HTML SPA shell, not a document
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    served: false
+    note: HTML SPA shell, not a document
+  - path: /.well-known/api-catalog
+    status: 200
+    served: false
+    note: HTML SPA shell, not a document
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    served: false
+    note: HTML SPA shell, not a document
+  - path: /.well-known/agent-card.json
+    status: 200
+    served: false
+    note: HTML SPA shell, not a document
+  - path: /.well-known/agent.json
+    status: 200
+    served: false
+    note: HTML SPA shell, not a document
+- host: www.airnow.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    served: false
+    note: HTML SPA shell, not a document
+  - path: /.well-known/openid-configuration
+    status: 200
+    served: false
+    note: HTML SPA shell, not a document
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    served: false
+    note: HTML SPA shell, not a document
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    served: false
+    note: HTML SPA shell, not a document
+  - path: /.well-known/api-catalog
+    status: 200
+    served: false
+    note: HTML SPA shell, not a document
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    served: false
+    note: HTML SPA shell, not a document
+  - path: /.well-known/agent-card.json
+    status: 200
+    served: false
+    note: HTML SPA shell, not a document
+  - path: /.well-known/agent.json
+    status: 200
+    served: false
+    note: HTML SPA shell, not a document

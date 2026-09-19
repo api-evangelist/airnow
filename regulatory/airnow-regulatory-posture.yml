@@ -1,0 +1,23 @@
+generated: '2026-09-19'
+method: searched
+source: https://airnow.com/
+note: >-
+  Harvest only. airnow.com is a single-page brochure site (Azure Static Web App) whose catch-all
+  answers every path, including /accessibility, /legal/subprocessors, /legal/dpa, /privacy/requests,
+  /transparency, /security/sbom and /privacy, with the same HTML shell; no privacy policy, terms,
+  accessibility statement, subprocessor list, DPA, SBOM or transparency report is published on it.
+  The site's marketing copy says the group provides "audit-ready evidence for privacy, ESG and
+  accessibility mandates" and that Mobstr supports DORA, NIS2 and HIPAA programmes, but those are
+  product claims about customers' apps, not a posture document for Airnow itself. Empty signals is
+  the measurement.
+signals: {}
+probed:
+- url: https://airnow.com/privacy
+  status: 200
+  note: SPA shell, no privacy policy
+- url: https://airnow.com/terms
+  status: 200
+  note: SPA shell, no terms
+- url: https://airnow.com/.well-known/security.txt
+  status: 200
+  note: SPA shell, no security.txt
