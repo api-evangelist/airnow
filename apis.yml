@@ -28,7 +28,7 @@ x-subsidiaries:
   url: https://www.vambrace.co.uk/
 specificationVersion: '0.20'
 created: '2026-09-19'
-modified: '2026-09-19'
+modified: '2026-10-06'
 tags:
 - Company
 - Mobile App
@@ -52,6 +52,8 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- url: https://airnow.com/blog/
+  type: Blog
 - type: DomainSecurity
   url: security/airnow-domain-security.yml
 - type: Website
